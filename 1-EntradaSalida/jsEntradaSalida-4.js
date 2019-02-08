@@ -5,5 +5,14 @@
 function mostrar()
 {
 
+    var name;
+    name=prompt("Ingrese por favor su nombre");
+    
+	// elNombre.value=name;
+
+	document.getElementById('elNombre').value=name;
+
+
 }
+
 
