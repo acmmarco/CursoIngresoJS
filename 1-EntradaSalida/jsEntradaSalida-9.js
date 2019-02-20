@@ -9,7 +9,7 @@ function mostrarAumento()
 	var resultado1;
 
 
-	sueldo1=importe.value;
+	sueldo1=sueldo.value;
 	resultado1=resultado.value;
 
 
@@ -17,9 +17,11 @@ function mostrarAumento()
 	resultado1=parseInt(resultado1);
 
 
-	var importeconaumento=sueldo1 - sueldo1/4;
+	var importeconaumento=sueldo1 + sueldo1/10;
 
 
 	document.getElementById('resultado').value=importeconaumento;
+
 	
 }
+
