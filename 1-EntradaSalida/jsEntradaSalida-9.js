@@ -23,6 +23,3 @@ function mostrarAumento()
 	document.getElementById('resultado').value=importeconaumento;
 	
 }
-
-	
-}
