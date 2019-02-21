@@ -1,10 +1,21 @@
 function mostrar()
 {
 
-var sexo = prompt("ingrese f ó m .");
+	var sexos;
+
+	sexos = prompt("ingrese f ó m .");
 
 
+while ((sexos !== "f") && (sexos !== "m")) 
 
-document.getElementById('Sexo').value=sexo;
+{
+	sexos = prompt("Dato No Valido. Por Favor Reintentelo. Muchas Gracias");
+} 
+
+
+   Sexo.value=sexos;
+
+   sexos = document.getElementById('Sexo').value;
+
 
 }//FIN DE LA FUNCIÓN
