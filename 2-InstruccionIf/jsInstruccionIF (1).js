@@ -8,7 +8,7 @@ function mostrar()
    
    edadaingresar=parseInt(edadaingresar);
    
-
+   
       if (edadaingresar == 15) 
 
    	   {
