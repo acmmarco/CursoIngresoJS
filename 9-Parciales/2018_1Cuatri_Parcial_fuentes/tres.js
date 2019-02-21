@@ -34,7 +34,7 @@ function mostrar()
 
 				{
 					resultado=numero1+numero2;
-                    alert("El Resultado De La Suma Entre: " + numero1 + " y " + numero2 + " Es: " + resultado);		
+                                        alert("El Resultado De La Suma Entre: " + numero1 + " y " + numero2 + " Es: " + resultado);		
 						
 
 						if (resultado > "10")
