@@ -1,9 +1,7 @@
 function mostrar()
 {
 
-	var sexos;
-
-	sexos = prompt("ingrese f ó m .");
+	var sexos = prompt("ingrese f ó m .");
 
 
 while ((sexos !== "f") && (sexos !== "m")) 
