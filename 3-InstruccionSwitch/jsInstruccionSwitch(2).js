@@ -28,12 +28,12 @@ switch (mesDelAño)
 	{ 
 		alert("Abrigate Que Hace Frio");
 		break;	
-    }
+        }
 
 	case "Septiembre":
-    case "Octubre":
-    case "Noviembre":
-    case "Diciembre":
+        case "Octubre":
+        case "Noviembre":
+        case "Diciembre":
 	{ 
 		alert("Ya Pasamos el Frio... Ahora Calooor!!! :D");
 		break;
