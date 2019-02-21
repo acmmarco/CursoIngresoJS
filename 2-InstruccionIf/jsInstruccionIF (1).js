@@ -2,10 +2,10 @@ function mostrar()
 {
 //tomo la edad  
 
-var edadaingresar;
+   var edadaingresar;
 
    edadaingresar=document.getElementById('edad').value;
-
+   
    edadaingresar=parseInt(edadaingresar);
    
 
