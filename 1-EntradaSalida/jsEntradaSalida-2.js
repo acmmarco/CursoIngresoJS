@@ -2,10 +2,12 @@
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
+	
+	var dato; 
 
-     var person;
-     person = prompt("Please enter your name", "Harry Potter");
-     alert(person);
+	dato=prompt("Por Favor Ingrese Su Nombre: ");
 
+	alert("Su Nombre Es: " + dato);
+	
 }
 
