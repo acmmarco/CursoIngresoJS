@@ -8,7 +8,7 @@ function mostrar()
 	while (contador<=10)
   
     {
-    	alert("Iteración While: " + contador);
+    	console.log(contador);
         contador=contador+1;
     }
 
