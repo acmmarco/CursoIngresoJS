@@ -7,6 +7,7 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
+
 var numeroSecreto; 
 numeroSecreto=parseInt(numeroSecreto);
 
@@ -36,6 +37,8 @@ function verificar()
     numero.value=numeroingresado;
 
     intentos.value=contadorIntentos;
+
+    console.log(numeroSecreto);
 
 
     if (numeroingresado == numeroSecreto)
