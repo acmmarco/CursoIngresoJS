@@ -22,7 +22,7 @@ numeroingresado=parseInt(numeroingresado);
 function comenzar()
 {
 
-    numeroSecreto=Math.Floor(Math.random()+100)+1;
+    numeroSecreto=Math.floor(Math.random()*100)+1;
     contadorIntentos=0;
 
 }
