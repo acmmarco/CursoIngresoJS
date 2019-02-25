@@ -6,67 +6,93 @@ y una de las cuatro operaciones básicas (suma, resta,
  el resultado de la operación y presionar el botón Aceptar.
 se debe informar si el resultado es el correcto o no.
 */
-    var respuesta;
+    
 
-	var operadores = ['+','-','*','/'];
-
-
-	var num1=document.getElementById('Primer número').value;
-	num1=parseInt(num1);
-
-	var oper=document.getElementById('Operador matemático').value;
-
-	var num2=document.getElementById('Segundo número').value;
-	num2=parseInt(num2);
-
-	var respuesta=document.getElementById('STu respuesta').value;
-	respuesta=parseInt(respuesta);
-
-	var respuestanum1;
-	respuestanum1=parseInt(respuestanum1);
-
-	var respuestanum2;
-	respuestanum2=parseInt(respuestanum2);
-
+	var num1;
+	var num2;
+	var oper;
+	var respuesta;
 	var respuestaop;
 
 
 
 function comenzar()
-{
+{  
+    num1 = (Math.floor(Math.random() * 10) + 1);
+    console.log("El Primer Numero Es: " + num1);
 
-	respuestanum1 = Math.floor((Math.random()*100)+1);
+    num2 = (Math.floor(Math.random() * 10) + 1);
+    console.log("El Segundo Numero Es: " + num2);
 
-    respuestanum2 = Math.floor((Math.random()*100)+1);
+    oper = (Math.floor(Math.random() * 4) + 1);
 
-    respuestaop = operadores[Math.floor(Math.random()*4)];
+
+
+
+   switch (oper) 
+   {
+        case 1:
+        {
+       	    console.log("La Operacion Es Suma");
+            respuestaop = num1 + num2;
+            console.log("La Respuesta Es: "+ respuestaop);
+            break;
+        }
+
+        case 2:
+        {
+            console.log("La Operacion Es Resta");
+            respuestaop = num1 - num2;
+            console.log("La Respuesta Es: "+ respuestaop);
+            break;
+        }
+
+        case 3:
+        {
+            console.log("La Operacion Es La Multiplicacion");
+            respuestaop = num1 * num2;
+            console.log("La Respuesta Es: "+ respuestaop);
+            break;
+        }
+
+        case 4:
+        {
+            console.log("La Operacion Es La Division");
+            respuestaop = num1 / num2;
+            console.log("La Respuesta Es: "+ respuestaop);
+            break;
+        }
+
+    }
+
+
+  document.getElementById('PrimerNumero').value = num1;
+  
+  document.getElementById('Operador').value = oper;
+  
+  document.getElementById('SegundoNumero').value = num2;
 
 
 }//FIN DE LA FUNCIÓN
 
 
 
+ 
 function Responder()
 {
-	
-	if ( (num1 == respuestanum1) && (num2 == respuestanum2) && (oper == respuestaop) )
-   
+
+	respuesta = document.getElementById('Respuesta').value;
+
+
+	if (respuesta == respuestaop)
    	{ 
    		alert("Felicitaciones!!! Ha Acertado!!! :D");
-
    	}
-
 
 	else
-   
    	{ 
    		alert("Vuelva a Intentarlo :D");
-
    	}
-
-
-   	console.log("El Numero 1 Es: " +respuestanum1 + ". El Numero 2 Es: " + respuestanum2 + ". La Operacion Basica Es: " + respuestaop);
-
 
 
 }//FIN DE LA FUNCIÓN
