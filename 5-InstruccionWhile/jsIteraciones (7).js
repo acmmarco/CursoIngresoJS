@@ -1,44 +1,32 @@
-function mostrar()
+function mostrar() 
+
+
 {
 
-	var contador=0;
-	var acumulador=0;
-	var respuesta;
-	var sumar=0;
-	
+  var contador;
+  var acumulador;
+  var respuesta;
 
-    acumulador=suma.value;
-    promediofinal=promedio.value;
-
-    acumulador=prompt("Ingrese Nuevo valor: ");
-    acumulador=parseInt(acumulador);
-
-    acumulador++;
-
-    respuesta=prompt("Desea Ingresar Un Nuevo Valor???");
-
- 
-    do 
-
-    {
-        
-       	acumulador=prompt("Ingrese Nuevo valor: ");
-  	    acumulador=parseInt(acumulador);
-
-  	    respuesta=prompt("Desea Ingresar Un Nuevo Valor???");
-
-  	    acumulador++;
-  	    contador++;
+  contador = 0;
+  acumulador = 1;
+  respuesta = 'si';
 
 
-    }
+  while (respuesta == "si")
 
-       while (respuesta == "si")
+  {
+
+    contador = contador + 1;
+    numero = prompt("Por Favor, Ingrese El Numero " + contador);
+    numero = parseInt(numero);
+    acumulador = acumulador + numero;
+    respuesta = prompt("Desea Ingresar Mas Datos??? Ingrese SI En Minuscula Para Continuar: ");
+
+  }
 
 
-
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+  document.getElementById('suma').value = acumulador;
+  document.getElementById('promedio').value = acumulador / contador;
 
 
 }//FIN DE LA FUNCIÓN
