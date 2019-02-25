@@ -1,32 +1,26 @@
 function mostrar()
 {
 
-	var contador; // Declaracion De Variables 
+  var contador;
   var acumulador;
-  
 
-  contador=0; // Inicializacion de Variables
-	acumulador=0;
-  
+  contador = 0;
+  acumulador = 1;
 
-while (contador < 5)
 
-{
+  while (contador < 5)
 
-  var numero=prompt("Ingrese El Numero: ");
-  numero=parseInt(numero)
-	contador=contador+1; // Para Que No Se Me Tilde 
-  acumulador=acumulador+1; // Para que no se me tilde 
+  {
+    contador = contador + 1;
+    numero = prompt("Por Favor, Ingrese El Numero " + contador);
+    numero = parseInt(numero);
+    acumulador = acumulador + numero;
+  }
 
-} 
 
 
 document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/5;
+document.getElementById('promedio').value=acumulador/contador;
 
 
-
-}//FIN DE LA FUNCIÓN
-
-
-}//FIN DE LA FUNCIÓN
+}
