@@ -4,76 +4,113 @@ siendo 1 para “piedra”, el 2 para “papel” y 3 para “tijera”.
 El jugador seleccionará una imagen correspondiente 
 a su opción  y le informaremos si ganó, empató o perdió.
 */
-
 var eleccionMaquina;
 
-var decisionUsuario = prompt("¿Piedra, papel o tijera?");
+var respuestamaq;
+var respuestaus;
 
-var numero =  Math.floor((Math.random()*3)+1); 
+var eleccionusuario;
 
-var respuesta;
 
 
 function comenzar()
 {
 
-    if (numero == 1) 
-    {
-        respuesta = "Piedra";
-    } 
+  eleccionMaquina = (Math.floor(Math.random() * 3) + 1);
 
-    else if (numero == 2) 
+
+  eleccionusuario=parseInt(eleccionusuario);
+
+
+
+  switch (eleccionMaquina)
+  {
+        case 1:
+        {
+            console.log("La Maquina Eligio Piedra");
+            break;
+        }
+
+         case 2:
+        {
+            console.log("La Maquina Eligio Papel");
+            break;
+        }
+
+         case 3:
+        {
+            console.log("La Maquina Eligio Tijera");
+            break;
+        }
+  }
+
+
+
+
+}//FIN DE LA FUNCIÓN
+
+
+
+  
+
+function piedra()
+{
+        
+    if (eleccionMaquina == eleccionusuario) 
     {
-        respuesta = "Papel";
+        alert("Es Un Empate!!! Los Dos Eligieron Lo Mismo ");
     } 
 
     else 
     {
-        respuesta = "Tijera";
-    }
-
-    return respuesta;
-
-
-
-
-
-}//FIN DE LA FUNCIÓN
-function piedra()
-{
-
-
-	    if (decisionUsuario == decisionOrdenador) {
-        return console.log("Empate, los dos eligieron " +decisionUsuario);
-    } else {
-        if (decisionUsuario == "Piedra" && decisionOrdenador == "Papel") {
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
+        if ((eleccionusuario == 1) && (eleccionMaquina == 2)) 
+        {
+            alert("Gana La Maquina.");
         } 
-        if (decisionUsuario == "Piedra" && decisionOrdenador == "Tijera") {
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
+
+        else ((eleccionusuario == 1) && (eleccionMaquina == 3)) 
+        {
+            alert("Gana El Usuario :D.");
         } 
+
+    } 
 	
-
 }//FIN DE LA FUNCIÓN
+
+
+
 function papel()
 {
-       if (decisionUsuario == "Papel" && decisionOrdenador == "Tijera") { 
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
-         }
-         if (decisionUsuario == "Papel" && decisionOrdenador == "Piedra"){
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
-        }
+
+       if ((eleccionusuario == 2) && (eleccionMaquina == 3)) 
+        {
+            alert("Gana La Maquina.");
+        } 
+
+        else ((eleccionusuario == 2) && (eleccionMaquina == 1)) 
+        {
+            alert("Gana El Usuario :D.");
+        } 
 
 }//FIN DE LA FUNCIÓN
+
+
 function tijera()
 {
-	
-   if (decisionUsuario == "Tijera" && decisionOrdenador == "Piedra") {
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
-            }
-         if (decisionUsuario == "Tijera" && decisionOrdenador == "Papel") {
-            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
-        }
 
+       if ((eleccionusuario == 3) && (eleccionMaquina == 2)) 
+        {
+            alert("Gana La Maquina.");
+        } 
+
+        else ((eleccionusuario == 3) && (eleccionMaquina == 1)) 
+        {
+            alert("Gana El Usuario :D.");
+        } 
 
 }//FIN DE LA FUNCIÓN
+
+
+
+
+
