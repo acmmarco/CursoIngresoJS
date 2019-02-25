@@ -1,18 +1,51 @@
-function mostrar()
+function mostrar() 
+
 {
+	var respuesta;
+	var numero;
+	var maximo;
+	var minimo;
+	var bandera;
 
-	var contador=0;
-	// declarar variables
-	
-	var respuesta='si';
 
-	while(respuesta!='no')
+	respuesta = 'si';
+	bandera = true;
+
+
+	while (respuesta == 'si') 
 	{
-		
-	
+
+		numero = prompt("Por Favor, Ingrese Un Numero ");
+		numero = parseInt(numero);
+
+
+		if (bandera) 
+		{
+			maximo = numero;
+			minimo = numero;
+			bandera = false;
+		} 
+
+
+		else 
+		{
+
+			if (numero > maximo) 
+			{
+				maximo = numero;
+			}
+
+			if (numero < minimo) 
+			{
+				minimo = numero;
+			}
+
+		}
+
+
+		respuesta = prompt("Desea Ingresar Mas Datos??? Ingrese SI En Minuscula Para Continuar: ");
+
 	}
 
-
-
-
-}//FIN DE LA FUNCIÓN
+	document.getElementById('maximo').value = maximo;
+	document.getElementById('minimo').value = minimo;
