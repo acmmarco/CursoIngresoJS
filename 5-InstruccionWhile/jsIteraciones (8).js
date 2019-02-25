@@ -1,47 +1,53 @@
-function mostrar()
-{
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
-
-
-
-    acumulador=suma.value;
-    
-    acumulador=producto.value;
-
-
-	
-	acumulador=prompt('Ingrese Nuevo valor: ');
-  	acumulador=parseInt(acumulador);
-
-    respuesta=prompt("Desea Ingresar Un Nuevo Valor???");
-
-    
-
-while (respuesta == "si")
+    function mostrar() 
 
 {
 
-	acumulador=prompt('Ingrese Nuevo valor: ');
-  	acumulador=parseInt(acumulador);
+	var contador;
+	var acumulador;
+	var respuesta;
+	var negativo;
+	var positivo;
 
-  	sumar = sumar + acumulador[i]; 
-			
-
-  	respuesta=prompt("Desea Ingresar Un Nuevo Valor???");
-
-  	
-
-	contador++;
-
-} 
+	contador = 0;
+	acumulador = 0;
+	respuesta = 'si';
+	negativo = 0;
+	positivo = 0;
 
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+	while (1) 
+
+	{
+		contador = contador + 1;
+		numero = prompt("Por Favor, Ingrese El Numero " + contador);
+		numero = parseInt(numero);
+		acumulador = acumulador + numero;
+		respuesta = prompt("Desea Ingresar Mas Datos??? Ingrese SI En Minuscula Para Continuar: ");
+
+		
+		if (numero > 0) 
+		{
+			positivo = positivo + numero;
+		} 
+
+		else 
+		{
+			negativo = negativo * numero;
+		}
+
+
+
+		if (respuesta != "si") 
+		{
+			break;
+		}
+
+	}
+
+
+	document.getElementById('suma').value = positivo;
+	document.getElementById('producto').value = negativo;
 
 }//FIN DE LA FUNCIÓN
+  
