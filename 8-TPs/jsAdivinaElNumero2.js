@@ -9,23 +9,19 @@
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
-var numeroSecreto; 
-numeroSecreto=parseInt(numeroSecreto);
 
+
+var numeroSecreto; // Defino Variables
 var contadorIntentos;
-contadorIntentos=parseInt(contadorIntentos);
 
-var numeroingresado;
-numeroingresado=parseInt(numeroingresado);
+
+contadorIntentos=0; // Le Pongo Valor Al Contador De Intentos
 
 
 
 function comenzar()
 {
-
-    numeroSecreto=Math.floor(Math.random()*100)+1;
-    contadorIntentos=0;
-
+	numeroSecreto = (Math.floor(Math.random() * 100) + 1); // Genero El Numero Secreto
 }
 
 
@@ -33,13 +29,13 @@ function comenzar()
 function verificar()
 {
 
-    contadorIntentos=contadorIntentos+1;
+    contadorIntentos=contadorIntentos+1; //  Se Generan Los Intentos Una Y Otra Vez
 
-    numero.value=numeroingresado;
+    numeroingresado=numero.value; // Atencion!!! Este Fue El Error!!! 
 
     intentos.value=contadorIntentos;
 
-    console.log(numeroSecreto);
+    console.log(numeroSecreto); // Se Muestra En La Consola El Numero Secreto
 
 
     if (numeroingresado == numeroSecreto)
@@ -67,50 +63,60 @@ function verificar()
       }
 
 
-}
 
+    if (numeroingresado == numeroSecreto)
 
+    {
+		switch (contadorIntentos)
 
-	switch (contadorIntentos)
-
-	{    
-		case "1":
 		{    
-			alert("Usted Es Un Psiquico");
-	    }
+			case 1:
+			{    
+				alert("Usted Es Un Psiquico");
+				break;
+	  	    }
 
-	    case "2":
-		{    
-			alert("Excelente Percepcion");
-	    }
+	   		case 2:
+		    {    
+			    alert("Excelente Percepcion");
+			    break;
+	        }
 
-	    case "3":
-		{    
-			alert("Esto Es Suerte");
-	    }
-	    case "4":
-		{    
-			alert("Excelente Tecnica");
-	    }
+	        case 3:
+		    {    
+		    	alert("Esto Es Suerte");
+		    	break;
+	        }
 
-        case "5":
-		{    
-			alert("Usted Esta En La Media");
-	    }
+	        case 4:
+	     	{    
+			    alert("Excelente Tecnica");
+			    break;
+	        }
 
-        case "6":
-        case "7":
-        case "8":
-        case "9":
-        case "10":
-		{    
-			alert("Falta Tecnica");
-	    }
+            case 5:
+		    {    
+		    	alert("Usted Esta En La Media");
+		    	break;
+	        }
 
-	    default:
-		{    
-			alert("Afortunado En El Amor :D");
-	    }
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+	    	{    
+		    	alert("Falta Tecnica");
+		    	break;
+	        }
 
+	        default:
+	    	{    
+		    	alert("Afortunado En El Amor :D");
+		    	break;
+	        }
 
+        }
 	}
+
+}
