@@ -7,7 +7,6 @@ y una de las cuatro operaciones básicas (suma, resta,
 se debe informar si el resultado es el correcto o no.
 */
     
-
 	var num1;
 	var num2;
 	var oper;
@@ -17,9 +16,9 @@ se debe informar si el resultado es el correcto o no.
 
 
 function comenzar()
-{  
-    num1 = (Math.floor(Math.random() * 10) + 1);
-    console.log("El Primer Numero Es: " + num1);
+{
+	num1 = (Math.floor(Math.random() * 10) + 1);
+	console.log("El Primer Numero Es: " + num1);
 
     num2 = (Math.floor(Math.random() * 10) + 1);
     console.log("El Segundo Numero Es: " + num2);
@@ -66,12 +65,6 @@ function comenzar()
     }
 
 
-  document.getElementById('PrimerNumero').value = num1;
-  
-  document.getElementById('Operador').value = oper;
-  
-  document.getElementById('SegundoNumero').value = num2;
-
 
 }//FIN DE LA FUNCIÓN
 
@@ -87,6 +80,14 @@ function Responder()
 	if (respuesta == respuestaop)
    	{ 
    		alert("Felicitaciones!!! Ha Acertado!!! :D");
+
+
+      document.getElementById('PrimerNumero').value = num1;
+  
+      document.getElementById('Operador').value = oper;
+  
+      document.getElementById('SegundoNumero').value = num2;
+
    	}
 
 	else
